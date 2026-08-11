@@ -1,0 +1,184 @@
+{
+  "name": "Faizan Khan",
+
+  "headline": "B.Tech IT Student | Python & Java Developer | Data Science & AI Enthusiast",
+
+  "education": {
+    "degree": "B.Tech",
+    "branch": "Information Technology",
+    "year": "Second Year",
+    "semester": "5th Semester",
+    "cgpa": 8.1,
+    "university": "Dr. Ram Manohar Lohia Avadh University"
+  },
+
+  "skills": {
+    "programming_languages": [
+      "Python",
+      "Java"
+    ],
+    "data_science": [
+      "Data Science",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Scikit-learn"
+    ],
+    "artificial_intelligence": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Deep Learning",
+      "Generative AI",
+      "Prompt Engineering"
+    ],
+    "web_development": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Frontend Web Development"
+    ],
+    "database": [
+      "SQL"
+    ],
+    "tools": [
+      "Git",
+      "GitHub"
+    ]
+  },
+
+  "projects": [
+    {
+      "name": "AI Virtual Mouse",
+      "category": "AI & Computer Vision",
+      "technologies": [
+        "Python",
+        "OpenCV",
+        "Computer Vision"
+      ],
+      "description": "A computer vision based virtual mouse that allows users to control mouse actions using hand gestures."
+    },
+    {
+      "name": "Parkinson's Disease Prediction",
+      "category": "Machine Learning",
+      "technologies": [
+        "Python",
+        "Pandas",
+        "Scikit-learn",
+        "Machine Learning"
+      ],
+      "description": "A machine learning project designed to predict Parkinson's disease using patient-related data."
+    },
+    {
+      "name": "Iris Classification",
+      "category": "Machine Learning",
+      "technologies": [
+        "Python",
+        "Pandas",
+        "Scikit-learn",
+        "Machine Learning"
+      ],
+      "description": "A machine learning classification project for predicting Iris flower species from flower measurements."
+    },
+    {
+      "name": "Brain Tumor Detection",
+      "category": "AI & Computer Vision",
+      "technologies": [
+        "Python",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Deep Learning",
+        "Computer Vision"
+      ],
+      "description": "An AI-based project for detecting brain tumors from medical brain images using machine learning and image analysis techniques."
+    },
+    {
+      "name": "Traffic Prediction System",
+      "category": "AI & Machine Learning",
+      "technologies": [
+        "Python",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Data Science"
+      ],
+      "description": "An AI and machine learning based system designed to analyze traffic-related data and predict traffic conditions."
+    },
+    {
+      "name": "Credit Card Fraud Detection",
+      "category": "Data Science",
+      "technologies": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "Machine Learning",
+        "Data Science"
+      ],
+      "description": "A data science and machine learning project that analyzes transaction data and identifies potentially fraudulent credit card transactions."
+    },
+    {
+      "name": "Stock Price Prediction using LSTM",
+      "category": "Data Science & Deep Learning",
+      "technologies": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "TensorFlow",
+        "Keras",
+        "LSTM",
+        "Deep Learning"
+      ],
+      "description": "A deep learning project that uses an LSTM neural network to analyze historical stock price data and predict future price trends."
+    }
+  ],
+
+  "experience": [
+    {
+      "role": "Data Science Intern",
+      "company": "Codec Technology"
+    },
+    {
+      "role": "Data Science Intern",
+      "company": "Soft Nexis Technology"
+    },
+    {
+      "role": "Frontend Web Developer",
+      "company": "StaxTech"
+    }
+  ],
+
+  "certifications": [
+    {
+      "name": "5 Days AI Agent Program",
+      "provider": "Google"
+    },
+    {
+      "name": "Python and Data Science",
+      "provider": "CodeWithHarry"
+    },
+    {
+      "name": "Generative AI",
+      "provider": "Microsoft"
+    },
+    {
+      "name": "IBM Cloud Essentials",
+      "provider": "IBM"
+    },
+    {
+      "name": "SEBI Investor Awareness Test",
+      "provider": "SEBI"
+    }
+  ],
+
+  "achievements": [
+    "Completed Google AI Agent program",
+    "Completed Python and Data Science training by CodeWithHarry",
+    "Completed SEBI Investor Awareness Test",
+    "Completed IBM Cloud Essentials"
+  ],
+
+  "social_links": {
+    "github": "https://github.com/faizankhan07867",
+    "linkedin": "https://www.linkedin.com/in/faizankhan0786",
+    "portfolio": "https://faizan-khan-dev-60aadry.gamma.site/"
+  }
+}
