@@ -19,6 +19,7 @@ const PROFILE = {
 };
 
 
+
 /* =========================================================
    PROJECTS
 ========================================================= */
@@ -350,7 +351,15 @@ function App() {
      NAVIGATION
   ===================================================== */
 
+  const scrollToSection = (id) => {
+  document.getElementById(id)?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
+
 const sendMessage = async () => {
+
   if (!message.trim() || loading) {
     return;
   }
