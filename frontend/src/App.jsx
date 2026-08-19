@@ -350,94 +350,73 @@ function App() {
      NAVIGATION
   ===================================================== */
 
-  const scrollToSection = (id) => {
-    document
-      .getElementById(id)
-      ?.scrollIntoView({
-        behavior: "smooth",
-      });
-  };
+const sendMessage = async () => {
+  if (!message.trim() || loading) {
+    return;
+  }
 
+  const userMessage = message.trim();
 
-  /* =====================================================
-     AI CHAT
-  ===================================================== */
+  setMessages((previous) => [
+    ...previous,
+    {
+      role: "user",
+      text: userMessage,
+    },
+  ]);
 
-  const sendMessage = async () => {
+  setMessage("");
+  setLoading(true);
 
-    if (!message.trim() || loading) {
-      return;
+  try {
+    const API_URL = "https://faizan-ai-backend.onrender.com";
+
+    const response = await fetch(`${API_URL}/api/chat`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message: userMessage,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        typeof data.detail === "string"
+          ? data.detail
+          : `Server error: ${response.status}`
+      );
     }
-
-    const userMessage = message.trim();
 
     setMessages((previous) => [
       ...previous,
       {
-        role: "user",
-        text: userMessage,
+        role: "ai",
+        text:
+          data.response ||
+          data.message ||
+          "I received your request, but no response was returned.",
       },
     ]);
+  } catch (error) {
+    console.error("Faizan AI Error:", error);
 
-    setMessage("");
+    setMessages((previous) => [
+      ...previous,
+      {
+        role: "ai",
+        text: `Sorry, Faizan AI is temporarily unavailable.
 
-    setLoading(true);
-
-    try {
-
-      const response = await fetch(
-        "https://faizan-ai-backend.onrender.com/api/chat",
-        {
-          method: "POST",
-
-          headers: {
-            "Content-Type": "application/json",
-          },
-
-          body: JSON.stringify({
-            message: userMessage,
-          }),
-        }
-      );
-
-
-      const data = await response.json();
-
-
-      if (!response.ok) {
-        throw new Error(
-          data.detail || "AI request failed"
-        );
-      }
-
-
-      setMessages((previous) => [
-        ...previous,
-        {
-          role: "ai",
-          text: data.response,
-        },
-      ]);
-
-    } catch (error) {
-
-      console.error(error);
-
-      setMessages((previous) => [
-        ...previous,
-        {
-          role: "ai",
-          text:
-            "I couldn't connect to Faizan AI. Please make sure the FastAPI backend is running on port 8000.",
-        },
-      ]);
-
-    } finally {
-
-      setLoading(false);
-
-    }
-  };
+${error.message || "Unable to connect to the AI backend."}`,
+      },
+    ]);
+  } finally {
+    setLoading(false);
+  }
+};
 
 
   const handleKeyDown = (event) => {
@@ -625,12 +604,18 @@ function App() {
 
 
             <a
-              href="/resume/Faizan_Khan_Resume.pdf"
-              download
-              className="secondary-button"
+             href="/resume/Faizan_Khan_Resume.pdf"
+             download="Faizan_Khan_Resume.pdf"
+             className="secondary-button"
             >
               📄 Download Resume
             </a>
+              
+              
+              
+          
+            
+            
 
 
             <button
