@@ -611,7 +611,6 @@ ${error.message || "Unable to connect to the AI backend."}`,
               View Projects →
             </button>
 
-
             <a
              href="/resume/Faizan_Khan_Resume.pdf"
              download="Faizan_Khan_Resume.pdf"
