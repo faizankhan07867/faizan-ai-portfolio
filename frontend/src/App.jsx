@@ -654,7 +654,11 @@ ${error.message || "Unable to connect to the AI backend."}`,
               <strong>6</strong>
               <span>Internships</span>
             </div>
-
+            
+            <div>
+              <strong>5</strong>
+              <span>Achievements</span>
+            </div>
           </div>
 
         </div>
