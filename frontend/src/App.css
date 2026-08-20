@@ -311,20 +311,19 @@ a {
 
 
 /* =========================================================
-   HERO
+   HERO — OLD TWO COLUMN STYLE
 ========================================================= */
 
 .hero {
   min-height: calc(100vh - 72px);
 
-  display: flex;
+  display: grid;
 
-  flex-direction: column;
+  grid-template-columns: 1.15fr 0.85fr;
 
   align-items: center;
-  justify-content: center;
 
-  text-align: center;
+  gap: 60px;
 
   padding-top: 80px;
   padding-bottom: 80px;
@@ -332,28 +331,18 @@ a {
 
 
 /* =========================================================
-   HERO CONTENT
+   HERO CONTENT — LEFT
 ========================================================= */
 
 .hero-content {
   width: 100%;
-  max-width: 950px;
 
-  margin: 0 auto;
+  max-width: 750px;
 
-  display: flex;
+  margin: 0;
 
-  flex-direction: column;
-
-  align-items: center;
-
-  text-align: center;
+  text-align: left;
 }
-
-
-/* =========================================================
-   HERO BADGE
-========================================================= */
 
 .badge {
   display: inline-flex;
@@ -383,19 +372,17 @@ a {
 ========================================================= */
 
 .hero h1 {
-  width: 100%;
-
   margin: 0;
 
   color: var(--text);
 
-  font-size: clamp(44px, 7vw, 78px);
+  font-size: clamp(44px, 6vw, 74px);
 
   line-height: 1;
 
   letter-spacing: -3px;
 
-  text-align: center;
+  text-align: left;
 }
 
 .gradient-text {
@@ -419,17 +406,15 @@ a {
 ========================================================= */
 
 .hero h2 {
-  width: 100%;
-
   margin: 25px 0 16px;
 
   color: var(--muted);
 
-  font-size: clamp(18px, 3vw, 25px);
+  font-size: clamp(18px, 2.5vw, 25px);
 
   line-height: 1.4;
 
-  text-align: center;
+  text-align: left;
 }
 
 
@@ -438,10 +423,9 @@ a {
 ========================================================= */
 
 .hero-description {
-  width: 100%;
-  max-width: 720px;
+  max-width: 680px;
 
-  margin: 0 auto;
+  margin: 0;
 
   color: var(--muted);
 
@@ -449,7 +433,7 @@ a {
 
   line-height: 1.8;
 
-  text-align: center;
+  text-align: left;
 }
 
 
@@ -458,8 +442,6 @@ a {
 ========================================================= */
 
 .hero-buttons {
-  width: 100%;
-
   margin-top: 30px;
 
   display: flex;
@@ -467,7 +449,7 @@ a {
   flex-wrap: wrap;
 
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
   gap: 12px;
 }
@@ -553,8 +535,6 @@ a {
 ========================================================= */
 
 .quick-stats {
-  width: 100%;
-
   margin-top: 45px;
 
   display: flex;
@@ -562,19 +542,19 @@ a {
   flex-wrap: wrap;
 
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
-  gap: 45px;
+  gap: 40px;
 }
 
 .quick-stats div {
-  min-width: 75px;
+  min-width: 70px;
 
   display: flex;
 
   flex-direction: column;
 
-  align-items: center;
+  align-items: flex-start;
 
   gap: 5px;
 }
@@ -593,27 +573,24 @@ a {
 
 
 /* =========================================================
-   HERO VISUAL
+   HERO VISUAL — RIGHT
 ========================================================= */
 
 .hero-visual {
   position: relative;
 
   width: 100%;
-  max-width: 700px;
 
-  min-height: 320px;
+  min-height: 450px;
 
   display: grid;
 
   place-items: center;
-
-  margin-top: 20px;
 }
 
 .ai-orb {
-  width: 250px;
-  height: 250px;
+  width: 270px;
+  height: 270px;
 
   display: grid;
   place-items: center;
@@ -636,8 +613,8 @@ a {
 }
 
 .orb-inner {
-  width: 145px;
-  height: 145px;
+  width: 155px;
+  height: 155px;
 
   display: grid;
   place-items: center;
@@ -653,13 +630,18 @@ a {
 
   color: white;
 
-  font-size: 45px;
+  font-size: 48px;
   font-weight: 900;
 
   box-shadow:
     inset 0 0 30px rgba(255, 255, 255, 0.18),
     0 0 60px rgba(124, 58, 237, 0.4);
 }
+
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
 
 .floating-card {
   position: absolute;
@@ -692,20 +674,20 @@ a {
 }
 
 .floating-one {
-  top: 10%;
-  left: 5%;
+  top: 13%;
+  left: 0;
 }
 
 .floating-two {
-  top: 35%;
-  right: 3%;
+  top: 40%;
+  right: 0;
 
   animation-delay: 1s;
 }
 
 .floating-three {
-  bottom: 10%;
-  left: 15%;
+  bottom: 13%;
+  left: 10%;
 
   animation-delay: 2s;
 }
@@ -1042,7 +1024,7 @@ a {
 
 
 /* =========================================================
-   CERTIFICATIONS
+   CERTIFICATIONS / ACHIEVEMENTS
 ========================================================= */
 
 .cert-grid {
@@ -1446,7 +1428,7 @@ footer p {
 
 
 /* =========================================================
-   RESUME IMAGE CONTAINER
+   RESUME IMAGE SCROLL
 ========================================================= */
 
 .resume-image-container {
@@ -1471,11 +1453,6 @@ footer p {
   align-items: flex-start;
   justify-content: center;
 }
-
-
-/* =========================================================
-   RESUME IMAGE
-========================================================= */
 
 .resume-image {
   display: block;
@@ -1511,6 +1488,13 @@ footer p {
     padding-right: 6px;
 
     font-size: 11px;
+  }
+
+  .hero {
+    grid-template-columns:
+      1fr 0.85fr;
+
+    gap: 35px;
   }
 
   .skills-grid {
@@ -1561,16 +1545,18 @@ footer p {
   .hero {
     min-height: auto;
 
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
     padding-top: 65px;
     padding-bottom: 65px;
   }
 
   .hero-content {
-    width: 100%;
+    max-width: 100%;
 
-    align-items: center;
-
-    text-align: center;
+    text-align: left;
   }
 
   .hero h1 {
@@ -1578,23 +1564,23 @@ footer p {
 
     letter-spacing: -2px;
 
-    text-align: center;
+    text-align: left;
   }
 
   .hero h2 {
     font-size: 18px;
 
-    text-align: center;
+    text-align: left;
   }
 
   .hero-description {
     font-size: 15px;
 
-    text-align: center;
+    text-align: left;
   }
 
 
-  /* HERO BUTTONS */
+  /* BUTTONS */
 
   .hero-buttons {
     flex-direction: column;
@@ -1622,7 +1608,11 @@ footer p {
 
     gap: 22px;
 
-    justify-items: center;
+    justify-items: start;
+  }
+
+  .quick-stats div {
+    align-items: flex-start;
   }
 
 
@@ -1631,7 +1621,7 @@ footer p {
   .hero-visual {
     min-height: 280px;
 
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   .ai-orb {
@@ -1748,7 +1738,7 @@ footer p {
   }
 
 
-  /* AI CHAT */
+  /* AI */
 
   .message {
     max-width: 90%;
@@ -1784,6 +1774,7 @@ footer p {
     justify-content: flex-start;
 
     overflow-y: auto;
+
     overflow-x: auto;
   }
 
@@ -1861,49 +1852,8 @@ footer p {
     font-size: 34px;
   }
 
-  .quick-stats {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .resume-title {
     font-size: 12px;
   }
 
-}
-
-/* =========================================================
-   HERO LEFT ALIGNMENT
-========================================================= */
-
-.hero {
-  align-items: flex-start;
-  justify-content: center;
-  text-align: left;
-}
-
-.hero-content {
-  align-items: flex-start;
-  text-align: left;
-  margin-left: 0;
-  margin-right: auto;
-}
-
-.hero h1,
-.hero h2,
-.hero-description {
-  text-align: left;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.hero-buttons {
-  justify-content: flex-start;
-}
-
-.quick-stats {
-  justify-content: flex-start;
-}
-
-.hero-description {
-  max-width: 720px;
 }
