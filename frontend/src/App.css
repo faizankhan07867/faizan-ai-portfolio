@@ -2383,4 +2383,238 @@ footer p {
     transition-duration: 0.01ms !important;
   }
 
+} 
+
+/* =========================================================
+   RESUME VIEWER
+========================================================= */
+
+.resume-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+
+.resume-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  background: rgba(0, 0, 0, 0.92);
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+
+.resume-modal-header {
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 20px;
+
+  background: rgba(15, 15, 20, 0.98);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+  flex-shrink: 0;
+}
+
+
+.resume-modal-header h2 {
+  margin: 0;
+
+  font-size: 18px;
+
+  color: #ffffff;
+}
+
+
+.resume-modal-header p {
+  margin: 4px 0 0;
+
+  font-size: 13px;
+
+  color: #a0a0a0;
+}
+
+
+.resume-modal-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.resume-download-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 16px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.resume-close-button {
+  width: 42px;
+  height: 42px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: #ffffff;
+
+  font-size: 20px;
+}
+
+
+.resume-close-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Main scrolling area */
+
+.resume-viewer {
+  flex: 1;
+
+  overflow-y: auto;
+  overflow-x: auto;
+
+  -webkit-overflow-scrolling: touch;
+
+  padding: 25px 15px 50px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+
+/* Individual PDF page */
+
+.resume-page {
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.45);
+
+  flex-shrink: 0;
+
+  line-height: 0;
+}
+
+
+.resume-page canvas {
+  display: block;
+
+  max-width: 100%;
+
+  height: auto !important;
+}
+
+
+.resume-loading,
+.resume-error {
+  margin-top: 50px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   MOBILE RESUME VIEWER
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .resume-modal-header {
+    padding: 10px 12px;
+
+    min-height: 62px;
+  }
+
+
+  .resume-modal-header h2 {
+    font-size: 15px;
+  }
+
+
+  .resume-modal-header p {
+    font-size: 11px;
+  }
+
+
+  .resume-download-button {
+    padding: 8px 10px;
+
+    font-size: 12px;
+  }
+
+
+  .resume-close-button {
+    width: 36px;
+    height: 36px;
+
+    font-size: 17px;
+  }
+
+
+  .resume-viewer {
+    padding: 15px 8px 40px;
+
+    gap: 15px;
+
+    align-items: center;
+  }
+
+
+  .resume-page {
+    width: 100%;
+
+    max-width: calc(100vw - 16px);
+
+    overflow: hidden;
+  }
+
+
+  .resume-page canvas {
+    width: 100% !important;
+
+    height: auto !important;
+  }
+
 }
