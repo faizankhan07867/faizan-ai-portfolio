@@ -17,7 +17,7 @@ const PROFILE = {
    RESUME
 ========================================================= */
 
-const RESUME_IMAGE = "/resume/Faizan_Khan_Resume.jpeg";
+const RESUME_IMAGE = "/resume/Faizan_Khan_Resume.jpg";
 
 
 /* =========================================================
